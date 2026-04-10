@@ -1,0 +1,9 @@
+node_modules/
+package-lock.json
+*.svg
+!favicon.svg
+generate-images.js
+download-images.js
+optimize-images.js
+amazon-mapping.json
+images/*.svg

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pull-vikings.fr/sitemap.xml
