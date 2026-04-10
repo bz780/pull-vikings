@@ -399,6 +399,17 @@ function amazonLink(p) {
   return `https://www.amazon.fr/${nameSlug}/dp/${p.asin}?linkCode=ll1&tag=${SITE.tag}&linkId=${p.asin.toLowerCase()}ref&ref_=as_li_ss_tl`;
 }
 
+function internalLinks(current) {
+  const others = products.filter(r => r.slug !== current.slug);
+  const picks = [];
+  const cats = new Set();
+  for (const r of others) {
+    if (!cats.has(r.category) && picks.length < 4) { picks.push(r); cats.add(r.category); }
+  }
+  for (const r of others) { if (!picks.includes(r) && picks.length < 4) picks.push(r); }
+  return picks.map(r => '<a href="/' + r.slug + '">' + r.h1 + '</a>').join(', ');
+}
+
 function head(title, desc, canonical, extra = '') {
   return `<!DOCTYPE html>
 <html lang="fr">
@@ -445,7 +456,11 @@ function header(activePage = '') {
 }
 
 function footer() {
-  const catLinks = products.map(p =>
+  const half = Math.ceil(products.length / 2);
+  const col1 = products.slice(0, half).map(p =>
+    `<a href="/${p.slug}">${p.h1}</a>`
+  ).join('\n          ');
+  const col2 = products.slice(half).map(p =>
     `<a href="/${p.slug}">${p.h1}</a>`
   ).join('\n          ');
 
@@ -454,14 +469,19 @@ function footer() {
       <div class="footer-grid">
         <div class="footer-brand">
           <h3>Pull Vikings</h3>
-          <p>Votre guide pour trouver le pull viking parfait. Nous s\u00e9lectionnons les meilleurs pulls d'inspiration nordique disponibles sur Amazon pour vous aider \u00e0 affirmer votre style viking.</p>
+          <p>Votre guide pour trouver le <a href="/#produits">pull viking</a> parfait. Nous s\u00e9lectionnons les meilleurs pulls d'inspiration nordique disponibles sur Amazon pour vous aider \u00e0 affirmer votre style viking.</p>
         </div>
         <div class="footer-col">
-          <h4>Nos Pulls</h4>
-          ${catLinks}
+          <h4>Collection</h4>
+          ${col1}
+        </div>
+        <div class="footer-col">
+          <h4>Voir aussi</h4>
+          ${col2}
         </div>
         <div class="footer-col">
           <h4>Informations</h4>
+          <a href="/#guide">Guide complet</a>
           <a href="/#faq">Questions fr\u00e9quentes</a>
           <a href="/#produits">Toute la collection</a>
           <a href="/">Accueil</a>
@@ -727,7 +747,7 @@ ${productCards}
 
         <div class="seo-grid">
           <div class="seo-block">
-            <svg class="seo-block-svg" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="40" height="40" rx="8" fill="rgba(184,134,11,.15)"/><path d="M12 28V14l8-4 8 4v14l-8 4-8-4z" stroke="#d4a843" stroke-width="1.5"/><path d="M12 14l8 4 8-4M20 18v10" stroke="#d4a843" stroke-width="1.5"/></svg>
+            <svg class="seo-block-svg" width="28" height="28" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="40" height="40" rx="8" fill="rgba(184,134,11,.15)"/><path d="M12 28V14l8-4 8 4v14l-8 4-8-4z" stroke="#d4a843" stroke-width="1.5"/><path d="M12 14l8 4 8-4M20 18v10" stroke="#d4a843" stroke-width="1.5"/></svg>
             <h3>5 fa\u00e7ons de porter un pull viking</h3>
             <p>Le pull viking se d\u00e9cline dans tous les styles. Voici nos associations pr\u00e9f\u00e9r\u00e9es :</p>
             <ul>
@@ -739,7 +759,7 @@ ${productCards}
             </ul>
           </div>
           <div class="seo-block">
-            <svg class="seo-block-svg" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="40" height="40" rx="8" fill="rgba(184,134,11,.15)"/><circle cx="20" cy="16" r="6" stroke="#d4a843" stroke-width="1.5"/><path d="M10 32c0-5.5 4.5-10 10-10s10 4.5 10 10" stroke="#d4a843" stroke-width="1.5"/></svg>
+            <svg class="seo-block-svg" width="28" height="28" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="40" height="40" rx="8" fill="rgba(184,134,11,.15)"/><circle cx="20" cy="16" r="6" stroke="#d4a843" stroke-width="1.5"/><path d="M10 32c0-5.5 4.5-10 10-10s10 4.5 10 10" stroke="#d4a843" stroke-width="1.5"/></svg>
             <h3>Bien choisir sa taille et sa mati\u00e8re</h3>
             <p>Le choix du bon pull viking d\u00e9pend de trois crit\u00e8res essentiels :</p>
             <ul>
@@ -751,7 +771,7 @@ ${productCards}
             </ul>
           </div>
           <div class="seo-block">
-            <svg class="seo-block-svg" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="40" height="40" rx="8" fill="rgba(184,134,11,.15)"/><path d="M14 12h12v6a6 6 0 01-6 6 6 6 0 01-6-6v-6z" stroke="#d4a843" stroke-width="1.5"/><path d="M20 24v5M16 29h8" stroke="#d4a843" stroke-width="1.5"/><path d="M26 12c2 0 4 1 4 4s-2 4-4 4M14 12c-2 0-4 1-4 4s2 4 4 4" stroke="#d4a843" stroke-width="1.5"/></svg>
+            <svg class="seo-block-svg" width="28" height="28" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="40" height="40" rx="8" fill="rgba(184,134,11,.15)"/><path d="M14 12h12v6a6 6 0 01-6 6 6 6 0 01-6-6v-6z" stroke="#d4a843" stroke-width="1.5"/><path d="M20 24v5M16 29h8" stroke="#d4a843" stroke-width="1.5"/><path d="M26 12c2 0 4 1 4 4s-2 4-4 4M14 12c-2 0-4 1-4 4s2 4 4 4" stroke="#d4a843" stroke-width="1.5"/></svg>
             <h3>Entretenir son pull viking</h3>
             <p>Un pull bien entretenu dure des ann\u00e9es. Suivez ces r\u00e8gles selon votre mati\u00e8re :</p>
             <ul>
@@ -898,7 +918,8 @@ ${header()}
           <div class="details-content">
             <h2>Description compl\u00e8te</h2>
             <p>${p.desc}</p>
-            <p>Ce ${p.h1.toLowerCase()} fait partie de notre s\u00e9lection des meilleurs v\u00eatements d'inspiration viking disponibles sur Amazon. Nous avons choisi ce mod\u00e8le pour sa qualit\u00e9, ses avis positifs et son design nordique authentique.</p>
+            <p>Ce ${p.h1.toLowerCase()} fait partie de notre <a href="/#produits">collection de pulls vikings</a> s\u00e9lectionn\u00e9s sur Amazon pour leur qualit\u00e9, leurs avis positifs et leur design nordique authentique.</p>
+            <p>D\u00e9couvrez aussi : ${internalLinks(p)} ou consultez notre <a href="/#guide">guide complet du pull viking</a>.</p>
           </div>
           <div class="details-specs">
             <h3>Caract\u00e9ristiques</h3>
