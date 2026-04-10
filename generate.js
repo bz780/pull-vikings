@@ -710,73 +710,55 @@ ${productCards}
         <div class="section-title">
           <h2>Le Pull Viking : Guide Complet</h2>
           <span class="bar"></span>
-          <p class="section-subtitle">Histoire, symboles, styles et conseils d'entretien</p>
         </div>
 
-        <div class="seo-intro">
-          <div class="seo-intro-text">
-            <p>Le pull viking s'inscrit dans une tradition textile scandinave vieille de plusieurs si\u00e8cles. Inspir\u00e9s par le tricot norv\u00e9gien n\u00e9 au XIX\u00e8me si\u00e8cle dans les villages de p\u00eacheurs, les pulls vikings modernes m\u00ealent h\u00e9ritage nordique et tendances actuelles.</p>
+        <div class="seo-story">
+          <div class="seo-story-block">
+            <h3>L'h\u00e9ritage du tricot nordique</h3>
+            <p>Le pull viking puise ses racines dans le <strong>tricot norv\u00e9gien traditionnel</strong>, n\u00e9 au XIX\u00e8me si\u00e8cle dans les villages de p\u00eacheurs des c\u00f4tes scandinaves. Ces v\u00eatements \u00e9taient d'abord fonctionnels : la laine \u00e9paisse prot\u00e9geait les marins du froid glacial de la mer du Nord, et les motifs g\u00e9om\u00e9triques servaient parfois \u00e0 identifier les familles et les r\u00e9gions d'origine.</p>
+            <p>Aujourd'hui, le pull viking est devenu un v\u00e9ritable <strong>ph\u00e9nom\u00e8ne de mode</strong>. Les motifs inspir\u00e9s de la mythologie nordique — runes, arbre Yggdrasil, loups, corbeaux d'Odin — sont revisit\u00e9s avec des techniques modernes comme l'impression 3D all-over ou le jacquard contemporain. R\u00e9sultat : des pi\u00e8ces qui allient confort, chaleur et un style unique impossible \u00e0 ignorer.</p>
           </div>
-        </div>
-
-        <div class="seo-symbols">
-          <h3 class="seo-section-heading">Les symboles vikings</h3>
-          <div class="symbol-grid">
-            <div class="symbol-card">
-              <div class="symbol-icon">&#9776;</div>
-              <h4>Valknut</h4>
-              <p>Trois triangles entrelac\u00e9s repr\u00e9sentant Odin et les guerriers du Valhalla.</p>
-            </div>
-            <div class="symbol-card">
-              <div class="symbol-icon">&#10038;</div>
-              <h4>Yggdrasil</h4>
-              <p>L'Arbre-Monde reliant les neuf royaumes de la cosmologie nordique.</p>
-            </div>
-            <div class="symbol-card">
-              <div class="symbol-icon">&#10023;</div>
-              <h4>Vegvisir</h4>
-              <p>Boussole magique guidant les navigateurs \u00e0 travers les temp\u00eates.</p>
-            </div>
-            <div class="symbol-card">
-              <div class="symbol-icon">&#9681;</div>
-              <h4>Fenrir</h4>
-              <p>Le loup g\u00e9ant incarnant la force brute et le destin in\u00e9luctable.</p>
-            </div>
+          <div class="seo-story-block">
+            <h3>Pourquoi choisir un pull viking ?</h3>
+            <p>Le succ\u00e8s du pull viking s'explique par son <strong>identit\u00e9 forte</strong>. Contrairement aux pulls classiques, il raconte une histoire. Chaque symbole a une signification profonde dans la culture nordique : le Valknut (trois triangles entrelac\u00e9s) repr\u00e9sente <strong>Odin et le Valhalla</strong>, Yggdrasil symbolise <strong>l'Arbre-Monde</strong> reliant les neuf royaumes, et le Vegvisir est une <strong>boussole magique</strong> qui guidait les navigateurs vikings \u00e0 travers les temp\u00eates.</p>
+            <p>C'est aussi un v\u00eatement <strong>polyvalent</strong>. En version tricot \u00e9pais avec col roul\u00e9, il remplace un manteau en mi-saison. En version sweat \u00e0 capuche imprim\u00e9 3D, il s'int\u00e8gre dans un look streetwear. En laine m\u00e9rinos cintr\u00e9e, il passe au bureau. Le pull viking s'adapte \u00e0 toutes les situations et tous les styles.</p>
           </div>
         </div>
 
         <div class="seo-grid">
           <div class="seo-block">
-            <div class="seo-block-icon">&#128085;</div>
-            <h3>Comment porter un pull viking ?</h3>
+            <svg class="seo-block-svg" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="40" height="40" rx="8" fill="rgba(184,134,11,.15)"/><path d="M12 28V14l8-4 8 4v14l-8 4-8-4z" stroke="#d4a843" stroke-width="1.5"/><path d="M12 14l8 4 8-4M20 18v10" stroke="#d4a843" stroke-width="1.5"/></svg>
+            <h3>5 fa\u00e7ons de porter un pull viking</h3>
+            <p>Le pull viking se d\u00e9cline dans tous les styles. Voici nos associations pr\u00e9f\u00e9r\u00e9es :</p>
             <ul>
-              <li>Jean brut + boots cuir = look nordique casual</li>
-              <li>Sous une veste en cuir pour un style guerrier urbain</li>
-              <li>Pantalon cargo + accessoires cuir vieilli</li>
-              <li>Laine + chemise dessous = chic scandinave</li>
-              <li>Capuche viking + jogging = sport ou cocooning</li>
+              <li><strong>Nordique casual</strong> — Jean brut + boots cuir + pull tricot col roul\u00e9. L'incontournable du week-end.</li>
+              <li><strong>Guerrier urbain</strong> — Pull sous une veste en cuir, pantalon slim noir. L'alliance du brut et du raffin\u00e9.</li>
+              <li><strong>Chic scandinave</strong> — Pull laine fine + chemise blanche dessous + chino. Parfait pour le bureau.</li>
+              <li><strong>Streetwear viking</strong> — Sweat capuche 3D + cargo + sneakers. Le style mythologique au quotidien.</li>
+              <li><strong>Cocooning</strong> — Pull plaid oversize + jogging. Pour les soir\u00e9es Netflix et les dimanches \u00e0 la maison.</li>
             </ul>
           </div>
           <div class="seo-block">
-            <div class="seo-block-icon">&#9989;</div>
-            <h3>Comment choisir son pull viking ?</h3>
+            <svg class="seo-block-svg" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="40" height="40" rx="8" fill="rgba(184,134,11,.15)"/><circle cx="20" cy="16" r="6" stroke="#d4a843" stroke-width="1.5"/><path d="M10 32c0-5.5 4.5-10 10-10s10 4.5 10 10" stroke="#d4a843" stroke-width="1.5"/></svg>
+            <h3>Bien choisir sa taille et sa mati\u00e8re</h3>
+            <p>Le choix du bon pull viking d\u00e9pend de trois crit\u00e8res essentiels :</p>
             <ul>
-              <li><strong>Mati\u00e8re</strong> — M\u00e9rinos (douceur), polyester (3D), coton (quotidien)</li>
-              <li><strong>Coupe</strong> — Regular, cintr\u00e9e ou oversize</li>
-              <li><strong>Motifs</strong> — Jacquard, impression 3D ou symboles discrets</li>
-              <li><strong>Usage</strong> — Sport (zip), hiver (laine), f\u00eates (No\u00ebl)</li>
-              <li><strong>Taille</strong> — Consultez le guide, les coupes varient</li>
+              <li><strong>Mati\u00e8re</strong> — La <em>laine m\u00e9rinos</em> offre douceur et thermoregulation. Le <em>polyester</em> permet les impressions 3D d\u00e9taill\u00e9es. Le <em>coton m\u00e9lang\u00e9</em> est id\u00e9al pour le quotidien.</li>
+              <li><strong>Coupe</strong> — <em>Regular</em> pour le confort, <em>cintr\u00e9e</em> pour un look ajust\u00e9, <em>oversize</em> pour le cocooning. Attention : les coupes asiatiques taillent souvent petit.</li>
+              <li><strong>Motifs</strong> — <em>Jacquard</em> pour l'authentique, <em>impression 3D</em> pour l'impact visuel, <em>brod\u00e9</em> pour la subtilit\u00e9. Les motifs all-over sont plus voyants que les symboles plac\u00e9s.</li>
+              <li><strong>Usage</strong> — Zip sport pour les activit\u00e9s outdoor, col roul\u00e9 laine pour l'hiver, capuche polaire pour le quotidien, jacquard festif pour No\u00ebl.</li>
+              <li><strong>Taille</strong> — Consultez syst\u00e9matiquement le guide des tailles de chaque produit. Les mesures poitrine et longueur varient fortement d'un mod\u00e8le \u00e0 l'autre.</li>
             </ul>
           </div>
           <div class="seo-block">
-            <div class="seo-block-icon">&#129526;</div>
-            <h3>Entretien de votre pull</h3>
+            <svg class="seo-block-svg" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="40" height="40" rx="8" fill="rgba(184,134,11,.15)"/><path d="M14 12h12v6a6 6 0 01-6 6 6 6 0 01-6-6v-6z" stroke="#d4a843" stroke-width="1.5"/><path d="M20 24v5M16 29h8" stroke="#d4a843" stroke-width="1.5"/><path d="M26 12c2 0 4 1 4 4s-2 4-4 4M14 12c-2 0-4 1-4 4s2 4 4 4" stroke="#d4a843" stroke-width="1.5"/></svg>
+            <h3>Entretenir son pull viking</h3>
+            <p>Un pull bien entretenu dure des ann\u00e9es. Suivez ces r\u00e8gles selon votre mati\u00e8re :</p>
             <ul>
-              <li>Lavage 30\u00b0C programme d\u00e9licat</li>
-              <li>Retourner avant lavage (prot\u00e8ge les motifs)</li>
-              <li>S\u00e9chage \u00e0 plat, jamais au s\u00e8che-linge</li>
-              <li>Ranger pli\u00e9, pas sur cintre</li>
-              <li>Polyester 3D = facile / Laine = soin particulier</li>
+              <li><strong>Pulls laine / m\u00e9rinos</strong> — Lavage 30\u00b0C programme laine, lessive sp\u00e9ciale. S\u00e9chage \u00e0 plat sur une serviette. Ne jamais mettre au s\u00e8che-linge.</li>
+              <li><strong>Sweats polyester 3D</strong> — Retourner avant lavage pour prot\u00e9ger l'impression. 30\u00b0C programme synth\u00e9tique. S\u00e8che-linge possible \u00e0 basse temp\u00e9rature.</li>
+              <li><strong>Pulls coton m\u00e9lang\u00e9</strong> — Machine 30-40\u00b0C classique. Retourner pour \u00e9viter le boulochage. S\u00e9chage libre.</li>
+              <li><strong>Pour tous</strong> — Ranger pli\u00e9 (jamais sur cintre, \u00e7a d\u00e9forme les \u00e9paules). \u00c9viter le repassage direct sur les motifs. En cas de boulochage, utiliser un rasoir \u00e0 tissus.</li>
             </ul>
           </div>
         </div>
