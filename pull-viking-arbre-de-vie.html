@@ -312,6 +312,13 @@
     </section>
   </main>
 
+  <div class="sticky-cta" id="stickyCta">
+    <span class="sticky-price">37,99 € <span class="sticky-old">52,99 €</span></span>
+    <a href="https://www.amazon.fr/Pull-Viking-Arbre-de-Vie-Yggdrasil-Impression-3D/dp/B0FS5BV1CT?linkCode=ll1&tag=zafili-21&linkId=b0fs5bv1ctref&ref_=as_li_ss_tl" class="btn-amazon" target="_blank" rel="nofollow noopener sponsored">
+      <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 100 4 2 2 0 000-4z"/></svg>
+      Acheter sur Amazon
+    </a>
+  </div>
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
@@ -353,6 +360,20 @@
     </div>
   </footer>
   <!--/email_off-->
+  <script>
+  (function(){
+    var cta=document.getElementById('stickyCta'),btn=document.querySelector('.btn-amazon');
+    if(!cta||!btn)return;
+    var last=0;
+    function check(){
+      var r=btn.getBoundingClientRect();
+      var show=r.bottom<0||r.top>window.innerHeight;
+      if(show!==last){cta.classList.toggle('visible',show);last=show}
+      requestAnimationFrame(check);
+    }
+    check();
+  })();
+  </script>
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Product","name":"Pull Viking Arbre de Vie Yggdrasil Impression 3D","description":"Ce pull viking célèbre Yggdrasil, l'Arbre de Vie cosmique de la mythologie nordique, avec une impression 3D d'une majesté rare. L'arbre millénaire qui relie les neuf mondes est représenté avec ses racines plongeant dans les profondeurs et sa cime touchant les étoiles, entouré de runes et de motifs de tatouage viking. Chaque détail raconte une histoire millénaire. Le tissu polyester-spandex offre confort et liberté de mouvement pour un pull aussi beau à regarder qu'agréable à porter.","image":"https://pull-vikings.fr/images/product-arbre.jpg","brand":{"@type":"Brand","name":"Pull Vikings"},"offers":{"@type":"Offer","url":"https://www.amazon.fr/Pull-Viking-Arbre-de-Vie-Yggdrasil-Impression-3D/dp/B0FS5BV1CT?linkCode=ll1&tag=zafili-21&linkId=b0fs5bv1ctref&ref_=as_li_ss_tl","price":"37.99","priceCurrency":"EUR","priceValidUntil":"2027-12-31","availability":"https://schema.org/InStock","seller":{"@type":"Organization","name":"Amazon.fr"}},"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.4","reviewCount":"234"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://pull-vikings.fr/"},{"@type":"ListItem","position":2,"name":"Pull Viking Arbre de Vie","item":"https://pull-vikings.fr/pull-viking-arbre-de-vie"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Que représente Yggdrasil ?","acceptedAnswer":{"@type":"Answer","text":"Yggdrasil est l'Arbre-Monde de la mythologie nordique, un frêne immense reliant les neuf mondes. Ses racines s'étendent dans les profondeurs, sa cime touche le ciel."}},{"@type":"Question","name":"Les motifs couvrent-ils tout le pull ?","acceptedAnswer":{"@type":"Answer","text":"Oui, l'impression couvre l'intégralité : devant, dos et manches. L'Arbre de Vie est centré sur le dos avec runes et tatouages en complément."}},{"@type":"Question","name":"Ce pull est-il adapté comme cadeau ?","acceptedAnswer":{"@type":"Answer","text":"C'est un excellent cadeau pour tout amateur de mythologie nordique, de culture viking ou de fantasy. Le design fait toujours son effet."}}]}]}</script>
 </body>
 </html>

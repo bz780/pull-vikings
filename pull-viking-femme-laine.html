@@ -310,6 +310,13 @@
     </section>
   </main>
 
+  <div class="sticky-cta" id="stickyCta">
+    <span class="sticky-price">49,99 € <span class="sticky-old">69,99 €</span></span>
+    <a href="https://www.amazon.fr/Pull-Viking-Femme-Laine-Polaire-Boussole-Runes/dp/B0GJSQ656W?linkCode=ll1&tag=zafili-21&linkId=b0gjsq656wref&ref_=as_li_ss_tl" class="btn-amazon" target="_blank" rel="nofollow noopener sponsored">
+      <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 100 4 2 2 0 000-4z"/></svg>
+      Acheter sur Amazon
+    </a>
+  </div>
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
@@ -351,6 +358,20 @@
     </div>
   </footer>
   <!--/email_off-->
+  <script>
+  (function(){
+    var cta=document.getElementById('stickyCta'),btn=document.querySelector('.btn-amazon');
+    if(!cta||!btn)return;
+    var last=0;
+    function check(){
+      var r=btn.getBoundingClientRect();
+      var show=r.bottom<0||r.top>window.innerHeight;
+      if(show!==last){cta.classList.toggle('visible',show);last=show}
+      requestAnimationFrame(check);
+    }
+    check();
+  })();
+  </script>
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Product","name":"Pull Viking Femme Laine Polaire Boussole Runes","description":"Ce pull viking pour femme en laine polaire doublée combine chaleur intense et élégance nordique. Le motif central Vegvisir — la boussole magique des Vikings — est entouré de runes anciennes dans un design à la fois mystique et raffiné. La polaire doublée offre une isolation thermique exceptionnelle tandis que la fermeture zip permet d'ajuster la ventilation. Une pièce technique et stylée qui accompagne aussi bien les randonnées que les journées fraîches en ville.","image":"https://pull-vikings.fr/images/product-femme-laine.jpg","brand":{"@type":"Brand","name":"Pull Vikings"},"offers":{"@type":"Offer","url":"https://www.amazon.fr/Pull-Viking-Femme-Laine-Polaire-Boussole-Runes/dp/B0GJSQ656W?linkCode=ll1&tag=zafili-21&linkId=b0gjsq656wref&ref_=as_li_ss_tl","price":"49.99","priceCurrency":"EUR","priceValidUntil":"2027-12-31","availability":"https://schema.org/InStock","seller":{"@type":"Organization","name":"Amazon.fr"}},"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.4","reviewCount":"132"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://pull-vikings.fr/"},{"@type":"ListItem","position":2,"name":"Pull Viking Femme Laine","item":"https://pull-vikings.fr/pull-viking-femme-laine"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Que signifie le symbole Vegvisir ?","acceptedAnswer":{"@type":"Answer","text":"Le Vegvisir est une boussole magique viking qui, selon la légende, guidait son porteur à travers les tempêtes. Symbole de protection et d'orientation."}},{"@type":"Question","name":"Ce pull est-il assez chaud pour l'hiver ?","acceptedAnswer":{"@type":"Answer","text":"La polaire doublée et les propriétés coupe-vent en font un pull très chaud, adapté aux températures hivernales et à la randonnée."}},{"@type":"Question","name":"Le zip est-il de bonne qualité ?","acceptedAnswer":{"@type":"Answer","text":"Oui, le zip est robuste et fluide. Il monte jusqu'en haut du col montant pour une protection maximale contre le froid."}}]}]}</script>
 </body>
 </html>

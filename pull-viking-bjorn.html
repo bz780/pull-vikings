@@ -312,6 +312,13 @@
     </section>
   </main>
 
+  <div class="sticky-cta" id="stickyCta">
+    <span class="sticky-price">34,99 € <span class="sticky-old">44,99 €</span></span>
+    <a href="https://www.amazon.fr/Pull-Viking-Bjorn-Sport-Zip-Coupe-Athl-tique/dp/B0G2Y37N3B?linkCode=ll1&tag=zafili-21&linkId=b0g2y37n3bref&ref_=as_li_ss_tl" class="btn-amazon" target="_blank" rel="nofollow noopener sponsored">
+      <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 100 4 2 2 0 000-4z"/></svg>
+      Acheter sur Amazon
+    </a>
+  </div>
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
@@ -353,6 +360,20 @@
     </div>
   </footer>
   <!--/email_off-->
+  <script>
+  (function(){
+    var cta=document.getElementById('stickyCta'),btn=document.querySelector('.btn-amazon');
+    if(!cta||!btn)return;
+    var last=0;
+    function check(){
+      var r=btn.getBoundingClientRect();
+      var show=r.bottom<0||r.top>window.innerHeight;
+      if(show!==last){cta.classList.toggle('visible',show);last=show}
+      requestAnimationFrame(check);
+    }
+    check();
+  })();
+  </script>
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Product","name":"Pull Viking Bjorn Sport Zip Coupe Athlétique","description":"Ce pull viking sport inspiré par Bjorn Côtes-de-Fer est conçu pour les guerriers modernes. La fermeture zip intégrale permet un enfilage rapide avant ou après l'entraînement. La coupe athlétique ajustée met en valeur la silhouette tandis que le tissu coton-polyester stretch accompagne chaque mouvement. Les poches latérales zippées sécurisent vos effets personnels, que ce soit à la salle ou en balade. Le design nordique discret passe aussi bien au quotidien qu'à la musculation.","image":"https://pull-vikings.fr/images/product-bjorn.jpg","brand":{"@type":"Brand","name":"Pull Vikings"},"offers":{"@type":"Offer","url":"https://www.amazon.fr/Pull-Viking-Bjorn-Sport-Zip-Coupe-Athl-tique/dp/B0G2Y37N3B?linkCode=ll1&tag=zafili-21&linkId=b0g2y37n3bref&ref_=as_li_ss_tl","price":"34.99","priceCurrency":"EUR","priceValidUntil":"2027-12-31","availability":"https://schema.org/InStock","seller":{"@type":"Organization","name":"Amazon.fr"}},"aggregateRating":{"@type":"AggregateRating","ratingValue":"4","reviewCount":"178"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://pull-vikings.fr/"},{"@type":"ListItem","position":2,"name":"Pull Viking Bjorn","item":"https://pull-vikings.fr/pull-viking-bjorn"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Ce pull convient-il vraiment pour le sport ?","acceptedAnswer":{"@type":"Answer","text":"Oui, sa coupe athlétique et son tissu coton-polyester stretch sont pensés pour l'entraînement. Le zip facilite l'enfilage et la ventilation."}},{"@type":"Question","name":"Les tailles sont-elles adaptées aux physiques musclés ?","acceptedAnswer":{"@type":"Answer","text":"La coupe athlétique est conçue pour les morphologies sportives. Le stretch s'adapte aux physiques développés. Consultez le guide des tailles."}},{"@type":"Question","name":"Peut-on le porter en dehors du sport ?","acceptedAnswer":{"@type":"Answer","text":"Absolument. Son design épuré et son style nordique en font un zip hoodie versatile pour le quotidien."}}]}]}</script>
 </body>
 </html>

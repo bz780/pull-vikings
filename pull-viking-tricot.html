@@ -310,6 +310,13 @@
     </section>
   </main>
 
+  <div class="sticky-cta" id="stickyCta">
+    <span class="sticky-price">34,99 € <span class="sticky-old">44,99 €</span></span>
+    <a href="https://www.amazon.fr/Pull-Viking-Tricot-Jacquard-Motifs-Nordiques/dp/B0FRYHDL53?linkCode=ll1&tag=zafili-21&linkId=b0fryhdl53ref&ref_=as_li_ss_tl" class="btn-amazon" target="_blank" rel="nofollow noopener sponsored">
+      <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 100 4 2 2 0 000-4z"/></svg>
+      Acheter sur Amazon
+    </a>
+  </div>
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
@@ -351,6 +358,20 @@
     </div>
   </footer>
   <!--/email_off-->
+  <script>
+  (function(){
+    var cta=document.getElementById('stickyCta'),btn=document.querySelector('.btn-amazon');
+    if(!cta||!btn)return;
+    var last=0;
+    function check(){
+      var r=btn.getBoundingClientRect();
+      var show=r.bottom<0||r.top>window.innerHeight;
+      if(show!==last){cta.classList.toggle('visible',show);last=show}
+      requestAnimationFrame(check);
+    }
+    check();
+  })();
+  </script>
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Product","name":"Pull Viking Tricot Jacquard Motifs Nordiques","description":"Ce pull viking en tricot jacquard perpétue la tradition textile scandinave avec une authenticité rare. Les motifs géométriques emblématiques — losanges, étoiles à huit branches et frises nordiques — sont réalisés dans la pure tradition du jacquard : deux fils de couleurs différentes tricotés simultanément pour un rendu dense et résistant. La maille serrée offre une protection efficace contre le froid tout en restant agréable au toucher.","image":"https://pull-vikings.fr/images/product-tricot.jpg","brand":{"@type":"Brand","name":"Pull Vikings"},"offers":{"@type":"Offer","url":"https://www.amazon.fr/Pull-Viking-Tricot-Jacquard-Motifs-Nordiques/dp/B0FRYHDL53?linkCode=ll1&tag=zafili-21&linkId=b0fryhdl53ref&ref_=as_li_ss_tl","price":"34.99","priceCurrency":"EUR","priceValidUntil":"2027-12-31","availability":"https://schema.org/InStock","seller":{"@type":"Organization","name":"Amazon.fr"}},"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.1","reviewCount":"145"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://pull-vikings.fr/"},{"@type":"ListItem","position":2,"name":"Pull Viking Tricot","item":"https://pull-vikings.fr/pull-viking-tricot"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Qu'est-ce que le tricot jacquard ?","acceptedAnswer":{"@type":"Answer","text":"Le jacquard est une technique de tricot qui crée des motifs colorés directement dans la maille. Les motifs sont intégrés au tissu et ne s'effacent jamais."}},{"@type":"Question","name":"Ce pull bouloche-t-il ?","acceptedAnswer":{"@type":"Answer","text":"Comme tout pull en laine mélangée, de légers bouloches peuvent apparaître. Utilisez un rasoir anti-bouloches pour les retirer facilement."}},{"@type":"Question","name":"Les couleurs sont-elles fidèles aux photos ?","acceptedAnswer":{"@type":"Answer","text":"Oui, les couleurs sont très proches des photos. Légères variations possibles selon l'écran, mais le rendu réel est excellent."}}]}]}</script>
 </body>
 </html>

@@ -704,6 +704,42 @@ ${productCards}
         </div>
       </div>
     </section>
+
+    <section class="seo-content" id="guide">
+      <div class="container">
+        <h2>Le Pull Viking : Histoire, Styles et Conseils</h2>
+        <p>Le pull viking s'inscrit dans une tradition textile scandinave vieille de plusieurs si\u00e8cles. Inspir\u00e9s par le tricot norv\u00e9gien n\u00e9 au XIX\u00e8me si\u00e8cle dans les villages de p\u00eacheurs, les pulls vikings modernes m\u00ealent h\u00e9ritage nordique et tendances actuelles. Que vous soyez passionn\u00e9 de mythologie, amateur de mode scandinave ou simplement \u00e0 la recherche d'un pull original et chaleureux, ce guide vous aide \u00e0 trouver le mod\u00e8le id\u00e9al.</p>
+
+        <h3>Les symboles vikings et leur signification</h3>
+        <p>Chaque motif a une histoire. Le Valknut (trois triangles entrelac\u00e9s) repr\u00e9sente Odin et les guerriers tomb\u00e9s au combat. Yggdrasil, l'Arbre-Monde, symbolise la connexion entre les neuf mondes de la cosmologie nordique. Le Vegvisir, boussole magique viking, guidait les navigateurs \u00e0 travers les temp\u00eates. Le loup Fenrir incarne la force brute et le destin in\u00e9luctable. Les runes, ancien alphabet scandinave, sont utilis\u00e9es comme motifs d\u00e9coratifs charg\u00e9s de sens.</p>
+
+        <div class="seo-grid">
+          <div class="seo-block">
+            <h3>Comment porter un pull viking ?</h3>
+            <ul>
+              <li>Avec un jean brut et des boots en cuir pour un look nordique casual</li>
+              <li>Sous une veste en cuir pour un style guerrier urbain</li>
+              <li>Avec un pantalon cargo et des accessoires en cuir vieilli</li>
+              <li>Pull laine + chemise en dessous pour un look chic scandinave</li>
+              <li>Sweat \u00e0 capuche viking + jogging pour le sport ou le cocooning</li>
+            </ul>
+          </div>
+          <div class="seo-block">
+            <h3>Comment choisir son pull viking ?</h3>
+            <ul>
+              <li><strong>Mati\u00e8re :</strong> Laine m\u00e9rinos pour la douceur, polyester pour les impressions 3D, coton pour le quotidien</li>
+              <li><strong>Coupe :</strong> Regular pour le confort, cintr\u00e9e pour le style, oversize pour le cocooning</li>
+              <li><strong>Motifs :</strong> Jacquard traditionnel, impression 3D mythologique, ou symboles discrets</li>
+              <li><strong>Usage :</strong> Sport (zip), quotidien (col rond), hiver (laine \u00e9paisse), f\u00eates (No\u00ebl)</li>
+              <li><strong>Taille :</strong> Consultez toujours le guide des tailles — les coupes varient selon les mod\u00e8les</li>
+            </ul>
+          </div>
+        </div>
+
+        <h3>Entretien de votre pull viking</h3>
+        <p>Pour pr\u00e9server votre pull le plus longtemps possible : lavez-le \u00e0 30\u00b0C en programme d\u00e9licat, retournez-le avant lavage pour prot\u00e9ger les motifs, s\u00e9chez-le \u00e0 plat (jamais au s\u00e8che-linge pour la laine), et rangez-le pli\u00e9 (pas sur cintre, pour \u00e9viter la d\u00e9formation). Les pulls en polyester avec impression 3D sont les plus faciles d'entretien, tandis que la laine v\u00e9ritable demande un soin particulier.</p>
+      </div>
+    </section>
   </main>
 
 ${footer()}
@@ -879,7 +915,28 @@ ${relatedCards}
     </section>
   </main>
 
+  <div class="sticky-cta" id="stickyCta">
+    <span class="sticky-price">${p.price} \u20ac${p.oldPrice ? ` <span class="sticky-old">${p.oldPrice} \u20ac</span>` : ''}</span>
+    <a href="${link}" class="btn-amazon" target="_blank" rel="nofollow noopener sponsored">
+      <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 100 4 2 2 0 000-4z"/></svg>
+      Acheter sur Amazon
+    </a>
+  </div>
 ${footer()}
+  <script>
+  (function(){
+    var cta=document.getElementById('stickyCta'),btn=document.querySelector('.btn-amazon');
+    if(!cta||!btn)return;
+    var last=0;
+    function check(){
+      var r=btn.getBoundingClientRect();
+      var show=r.bottom<0||r.top>window.innerHeight;
+      if(show!==last){cta.classList.toggle('visible',show);last=show}
+      requestAnimationFrame(check);
+    }
+    check();
+  })();
+  </script>
   <script type="application/ld+json">${JSON.stringify(jsonld)}</script>
 </body>
 </html>`;

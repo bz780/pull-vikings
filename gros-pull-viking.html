@@ -312,6 +312,13 @@
     </section>
   </main>
 
+  <div class="sticky-cta" id="stickyCta">
+    <span class="sticky-price">42,99 € <span class="sticky-old">59,99 €</span></span>
+    <a href="https://www.amazon.fr/Gros-Pull-Viking-Oversize-Impression-3D-Armure/dp/B0FVY618RT?linkCode=ll1&tag=zafili-21&linkId=b0fvy618rtref&ref_=as_li_ss_tl" class="btn-amazon" target="_blank" rel="nofollow noopener sponsored">
+      <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 100 4 2 2 0 000-4z"/></svg>
+      Acheter sur Amazon
+    </a>
+  </div>
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
@@ -353,6 +360,20 @@
     </div>
   </footer>
   <!--/email_off-->
+  <script>
+  (function(){
+    var cta=document.getElementById('stickyCta'),btn=document.querySelector('.btn-amazon');
+    if(!cta||!btn)return;
+    var last=0;
+    function check(){
+      var r=btn.getBoundingClientRect();
+      var show=r.bottom<0||r.top>window.innerHeight;
+      if(show!==last){cta.classList.toggle('visible',show);last=show}
+      requestAnimationFrame(check);
+    }
+    check();
+  })();
+  </script>
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Product","name":"Gros Pull Viking Oversize Impression 3D Armure","description":"Ce gros pull viking oversize est fait pour ceux qui veulent du volume, du confort et du caractère. L'impression 3D d'armure de guerrier nordique couvre l'intégralité du pull avec un réalisme impressionnant. La coupe volontairement ample et la grande poche kangourou en font le pull douillet par excellence. Tissu épais et chaud qui tombe naturellement pour un look imposant et décontracté. Disponible du S au 5XL pour que personne ne soit laissé de côté.","image":"https://pull-vikings.fr/images/product-gros.jpg","brand":{"@type":"Brand","name":"Pull Vikings"},"offers":{"@type":"Offer","url":"https://www.amazon.fr/Gros-Pull-Viking-Oversize-Impression-3D-Armure/dp/B0FVY618RT?linkCode=ll1&tag=zafili-21&linkId=b0fvy618rtref&ref_=as_li_ss_tl","price":"42.99","priceCurrency":"EUR","priceValidUntil":"2027-12-31","availability":"https://schema.org/InStock","seller":{"@type":"Organization","name":"Amazon.fr"}},"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.2","reviewCount":"341"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://pull-vikings.fr/"},{"@type":"ListItem","position":2,"name":"Gros Pull Viking","item":"https://pull-vikings.fr/gros-pull-viking"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"La coupe oversize est-elle vraiment ample ?","acceptedAnswer":{"@type":"Answer","text":"Oui, ce pull est volontairement large. Pour un look très oversize, prenez votre taille. Pour plus ajusté, descendez d'une taille."}},{"@type":"Question","name":"Ce pull est-il adapté pour des événements médiévaux ?","acceptedAnswer":{"@type":"Answer","text":"Son design d'armure viking 3D en fait un excellent choix pour les foires médiévales, conventions ou soirées costumées."}},{"@type":"Question","name":"Le pull est-il lourd ?","acceptedAnswer":{"@type":"Answer","text":"Malgré son aspect imposant, le tissu polyester reste léger (~350g). L'épaisseur vient de la maille, pas du poids."}}]}]}</script>
 </body>
 </html>
