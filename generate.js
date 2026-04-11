@@ -442,7 +442,7 @@ function header(activePage = '') {
         <a href="/"${activePage === '/' ? ' class="active"' : ''}>Accueil</a>
         <div class="nav-dropdown">
           <a href="/#produits" class="nav-dropdown-trigger">Nos Pulls ▾</a>
-          <div class="nav-dropdown-menu">
+          <div class="nav-dropdown-menu" style="display:none">
             ${navProducts}
           </div>
         </div>
